@@ -1,41 +1,66 @@
 <!DOCTYPE html>
-<html ng-app="airpub" ng-controller="global">
-  <head ng-controller="meta">
-    <base href="/" />
+<html lang="id">
+<head>
     <meta charset="UTF-8">
-    <title ng-bind="title"></title>
-    <meta name="fragment" content="!" />
-    <meta name="description" content="{{description}}">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <!-- dependencies stylesheets and scripts, using default GitHub Page CDN -->
-    <link rel="stylesheet" href="http://static.duoshuo.com/airpub/airpub-dependencies.min.css?v=0.3.2">
-    <script src="http://static.duoshuo.com/airpub/airpub-dependencies.min.js?v=0.3.2"></script>
-    <!-- default theme: chill -->
-    <link rel="stylesheet" href="http://static.duoshuo.com/airpub/themes/chill/0.3.0/css/chill.min.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="http://static.duoshuo.com/airpub/themes/chill/0.3.0/favicon.ico" />
-  </head>
-  <body ng-controller="base" ng-class="state.current.controller">
-    <div ui-view="layout"></div>
-    <!-- airpub configs -->
-    <script>
-      var airpubConfigs = {        
-        name: 'Airpub', // 博客名称
-        description: 'Just another Airpub blog', // 博客描述
-        url: 'http://your-uri', // 博客站点永久链接
-        theme: 'chill/0.3.0', // 当前主题与主题版本（如无版本可省略为：`chill`）
-        themePath: 'http://static.duoshuo.com/airpub/themes', // 博客主题根目录
-        upyun: { // 用于上传图片
-          bucket: 'mybucket', // 又拍云 bucket 配置 (可选)
-          form_api_secret: 'xxxxxx' // 又拍云 form_api_secret (可选)
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Menuju Tokoku...</title>
+    <!-- Redirect otomatis ke halaman berjualan Itemku -->
+    <meta http-equiv="refresh" content="0; url=https://tokoku.itemku.com/berjualan-di-itemku">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f5f5f5;
+            text-align: center;
+            padding: 20px;
         }
-      };
-      var duoshuoQuery = {
-        short_name: 'your_duoshuo_short_name' // 修改成你的多说 short_name
-      };
-    </script>
-    <!-- duoshuo embed js -->
-    <script src="http://static.duoshuo.com/embed.unstable.js"></script> 
-    <!-- airpub angular app -->
-    <script src="http://static.duoshuo.com/airpub/airpub.min.js?v=0.3.2"></script>
-  </body>
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 320px;
+            width: 100%;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #e0e0e0;
+            border-top: 4px solid #00a82d;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        p {
+            color: #333;
+            margin: 10px 0;
+        }
+        a {
+            color: #00a82d;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .note {
+            font-size: 12px;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spinner"></div>
+        <p>Mengalihkan ke halaman <strong>Berjualan di Itemku</strong>...</p>
+        <p>Jika tidak otomatis, <a href="https://tokoku.itemku.com/berjualan-di-itemku">klik di sini</a>.</p>
+        <div class="note">Halaman akan terbuka di tab browser.</div>
+    </div>
+</body>
 </html>
