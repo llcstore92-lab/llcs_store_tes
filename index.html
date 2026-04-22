@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Hubungi Kami via WhatsApp</title>
+    <title>Hubungi Kami - WhatsApp & Telegram</title>
     <style>
         * {
             margin: 0;
@@ -36,8 +36,8 @@
             transform: translateY(-5px);
         }
 
-        .wa-icon {
-            width: 80px;
+        .icon-header {
+            font-size: 60px;
             margin-bottom: 20px;
         }
 
@@ -53,6 +53,7 @@
             font-size: 16px;
         }
 
+        /* Tombol WhatsApp */
         .btn-wa {
             display: inline-flex;
             align-items: center;
@@ -69,7 +70,8 @@
             transition: all 0.3s ease;
             box-shadow: 0 8px 16px rgba(37, 211, 102, 0.3);
             cursor: pointer;
-            margin-bottom: 20px;
+            width: 100%;
+            margin-bottom: 15px;
         }
 
         .btn-wa:hover {
@@ -78,8 +80,43 @@
             box-shadow: 0 12px 20px rgba(37, 211, 102, 0.4);
         }
 
-        .btn-wa:active {
+        /* Tombol Telegram */
+        .btn-tg {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #0088cc;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 60px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 16px rgba(0, 136, 204, 0.3);
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .btn-tg:hover {
+            background-color: #0077b3;
+            transform: scale(1.02);
+            box-shadow: 0 12px 20px rgba(0, 136, 204, 0.4);
+        }
+
+        .btn-wa:active, .btn-tg:active {
             transform: scale(0.98);
+        }
+
+        /* Container tombol */
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
         }
 
         .info {
@@ -105,6 +142,30 @@
             word-break: break-all;
         }
 
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .divider::before {
+            margin-right: 15px;
+        }
+
+        .divider::after {
+            margin-left: 15px;
+        }
+
         footer {
             margin-top: 25px;
             font-size: 12px;
@@ -115,7 +176,7 @@
             .card {
                 padding: 30px 20px;
             }
-            .btn-wa {
+            .btn-wa, .btn-tg {
                 font-size: 18px;
                 padding: 14px 24px;
             }
@@ -124,30 +185,50 @@
 </head>
 <body>
     <div class="card">
-        <!-- Ikon WhatsApp sederhana (emoji atau teks) -->
-        <div class="wa-icon">💬</div>
+        <div class="icon-header">📱💬</div>
         <h1>Hubungi Kami</h1>
-        <div class="subtitle">Klik tombol di bawah untuk chat via WhatsApp</div>
+        <div class="subtitle">Pilih platform untuk chat dengan kami</div>
 
-        <!-- GANTI NOMOR INI dengan nomor WhatsApp tujuan (gunakan kode negara tanpa tanda +) -->
-        <a href="https://wa.me/6285823710815" 
-           class="btn-wa" 
-           target="_blank" 
-           rel="noopener noreferrer">
-            <span>📱</span> Buka WhatsApp
-        </a>
+        <div class="button-group">
+            <!-- Tombol WhatsApp -->
+            <a href="https://wa.me/6285823710815" 
+               class="btn-wa" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                <span>📱</span> WhatsApp
+            </a>
 
-        <!-- Informasi cara ganti nomor -->
+            <!-- Tombol Telegram -->
+            <a href="https://t.me/llc_store" 
+               class="btn-tg" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                <span>✈️</span> Telegram @llc_store
+            </a>
+        </div>
+
+        <!-- Informasi cara ganti nomor WhatsApp -->
         <div class="info">
-            <p>📌 <strong>Cara mengganti nomor tujuan:</strong></p>
+            <p>📌 <strong>Cara mengganti nomor WhatsApp:</strong></p>
             <p>1. Edit file <code>index.html</code></p>
-            <p>2. Cari tulisan <code>https://wa.me/6281234567890</code></p>
-            <p>3. Ganti angka <strong>6281234567890</strong> dengan nomor WhatsApp kamu.<br>
+            <p>2. Cari tulisan <code>https://wa.me/6285823710815</code></p>
+            <p>3. Ganti angka <strong>6285823710815</strong> dengan nomor WhatsApp kamu.<br>
             Contoh: <code>https://wa.me/6281312345678</code> (tanpa tanda + atau spasi)</p>
-            <p>💡 <strong>Tips:</strong> Gunakan kode negara (62 untuk Indonesia), lalu nomor tanpa 0 di depan.</p>
+            
+            <div class="divider"></div>
+            
+            <p>📌 <strong>Cara mengganti username Telegram:</strong></p>
+            <p>1. Edit file <code>index.html</code></p>
+            <p>2. Cari tulisan <code>https://t.me/llc_store</code></p>
+            <p>3. Ganti <strong>llc_store</strong> dengan username Telegram kamu.<br>
+            Contoh: <code>https://t.me/usernamekamu</code></p>
+            
+            <p>💡 <strong>Tips:</strong> 
+            - Gunakan kode negara (62 untuk Indonesia), lalu nomor tanpa 0 di depan untuk WA.<br>
+            - Untuk Telegram, cukup gunakan username tanpa tanda @.</p>
         </div>
         <footer>
-            © 2025 · WhatsApp akan terbuka otomatis di browser / aplikasi
+            © 2025 · WhatsApp & Telegram akan terbuka otomatis di aplikasi masing-masing
         </footer>
     </div>
 </body>
